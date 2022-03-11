@@ -6,6 +6,8 @@
   "main": "bin/index.mjs",
   "license": "MIT",
   "type": "module",
+  "repository": "github:edumudu/loctry",
+  "homepage": "https://github.com/edumudu/loctry#readme",
   "keywords": [
     "cli",
     "local development",
