@@ -14,6 +14,11 @@
     "local registry",
     "local npm"
   ],
+  "files": [
+    "bin",
+    "config",
+    "commands"
+  ],
   "bin": {
     "loctry": "./bin/index.mjs"
   },
