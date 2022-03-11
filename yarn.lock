@@ -60,14 +60,6 @@
   "resolved" "https://registry.npmjs.org/is-fullwidth-code-point/-/is-fullwidth-code-point-3.0.0.tgz"
   "version" "3.0.0"
 
-"local-registry@file:../../../.local-registry/node_modules/local-registry-1.0.0.tgz":
-  "integrity" "sha512-5ovVKlC5hblwbhhPUpY1TFY5X9RHAOu0qQpw/8/deIvUAXuqwOs3B65WyVl1nwLgNs3iqUNf5cY53T/ZL7j2Fw=="
-  "resolved" "file:../../../.local-registry/node_modules/local-registry-1.0.0.tgz"
-  "version" "1.0.0"
-  dependencies:
-    "chalk" "^5.0.1"
-    "yargs" "^17.3.1"
-
 "require-directory@^2.1.1":
   "integrity" "sha1-jGStX9MNqxyXbiNE/+f3kqam30I="
   "resolved" "https://registry.npmjs.org/require-directory/-/require-directory-2.1.1.tgz"
