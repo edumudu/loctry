@@ -7,7 +7,12 @@
   "license": "MIT",
   "type": "module",
   "keywords": [
-    "cli"
+    "cli",
+    "local development",
+    "library testing",
+    "library development",
+    "local registry",
+    "local npm"
   ],
   "bin": {
     "loctry": "./bin/index.mjs"
@@ -17,7 +22,7 @@
     "yargs": "^17.3.1"
   },
   "engines": {
-    "node": ">=8.0.0",
+    "node": ">=10.0.0",
     "npm": ">=7.0.0",
     "yarn": ">=1.0.0"
   }

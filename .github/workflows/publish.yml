@@ -1,0 +1,40 @@
+name: Publish
+
+on:
+  push:
+    tags:
+       - '*'
+
+jobs:
+  built-publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Set-up node
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16
+
+      - name: Install dependencies
+        run: yarn --frozen-lockfile
+
+      - uses: pocket-apps/action-update-version@v1
+        with:
+          files: ./package.json
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Publishing Library
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+
+      - name: Update Package.json version
+        run: |
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add .
+          git commit -m "bump package version"
+          git push
