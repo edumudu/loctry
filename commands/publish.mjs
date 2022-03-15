@@ -4,7 +4,7 @@ import chalk from 'chalk';
 import { modulesRoot } from '../config/paths.mjs';
 
 const publish = () => {
-  execSync(`npm pack --pack-destination ${modulesRoot}`);
+  execSync(`npm pack --pack-destination ${modulesRoot}`, { stdio: 'inherit' });
 
   console.log(chalk.green('Package published successfully!'));
 };
