@@ -40,6 +40,7 @@ Enter in your pacakge directory and run
 ```bash
 loctry publish
 ```
+> NOTE: This  command needs to be run in the same dir as the `package.json`
 
 This command will pack and send your package tarball to the `.loctry` folder to be avaiable to be installed in others projects. 
 
