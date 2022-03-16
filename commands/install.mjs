@@ -1,23 +1,19 @@
 import { execSync } from 'child_process';
 import fs from 'fs';
-import path from 'path';
 import chalk from 'chalk';
 
-import { modulesRoot } from '../config/paths.mjs';
+import { packagesInfoPath } from '../config/paths.mjs';
 
 const install = (packageName) => {
-  const filenameMatchRegex = new RegExp(`^${packageName}-v?\\d+\\.\\d+\\.\\d+\\.tgz$`);
-  const availableVersions = fs.readdirSync(modulesRoot).filter((file) => filenameMatchRegex.test(file));
-  const tarballFilename = availableVersions[availableVersions.length - 1];
+  const packagesInfo = JSON.parse(fs.readFileSync(packagesInfoPath, 'utf-8'));
+  const tarballPath = packagesInfo[packageName]?.tarballPath;
 
-  if(!tarballFilename) {
+  if(!tarballPath) {
     console.log(chalk.red(`Package ${packageName} not found in the local registry`));
     process.exit(1);
   };
 
-  const packageTarballAbsPath = path.join(modulesRoot, tarballFilename);
-
-  execSync(`npm install ${packageTarballAbsPath}`);
+  execSync(`npm install ${tarballPath}`);
   console.log(chalk.green('Package installed successfully!'));
 };
 
