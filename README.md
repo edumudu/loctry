@@ -41,7 +41,11 @@ Enter in your pacakge directory and run
 loctry publish
 ```
 
-This command will pack and send your package tarball to the `.loctry` folder to be avaiable to be installed in others projects. To install the package enter in the project directory and run
+This command will pack and send your package tarball to the `.loctry` folder to be avaiable to be installed in others projects. 
+
+> NOTE: Do not modify `.loctry` dir manually. This is an internal API
+
+To install the package enter in the project directory and run
 ```bash
 loctry install <package-name>
 ```
