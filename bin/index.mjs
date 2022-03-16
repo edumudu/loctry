@@ -14,8 +14,8 @@ if(!fs.existsSync(packageDir)) fs.mkdirSync(packageDir);
 if(!fs.existsSync(modulesRoot)) fs.mkdirSync(modulesRoot);
 
 yargs(hideBin(process.argv))
-  .command('publish', 'Publish a package to the local registry', (yargsInstance) => publish(yargsInstance.parse()))
-  .command('install', 'Install a package from the local registry', (yargsInstance) => install(yargsInstance.parse()._[1]))
+  .command('publish', 'Publish a package to the local registry', {}, () => publish())
+  .command('install <packageName>', 'Install a package from the local registry', {}, (argv) => install(argv.packageName))
   .demandCommand(1, chalk.red('You need to specify a command'))
   .strict()
   .help()
