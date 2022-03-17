@@ -17,4 +17,7 @@ const install = (packageName) => {
   console.log(chalk.green('Package installed successfully!'));
 };
 
-export default install;
+export const command = 'install <packageName>';
+export const desc = 'Install a package from the local registry';
+export const builder = {};
+export const handler = (argv) => install(argv.packageName);

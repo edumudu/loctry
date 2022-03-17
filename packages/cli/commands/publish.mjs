@@ -22,4 +22,7 @@ const publish = () => {
   console.log(chalk.green('Package published successfully!'));
 };
 
-export default publish;
+export const command = 'publish';
+export const desc = 'Publish a package to the local registry';
+export const builder = {};
+export const handler = publish;
