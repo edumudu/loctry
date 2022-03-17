@@ -108,7 +108,7 @@ turbo-linux-32@1.1.6:
 
 turbo-linux-64@1.1.6:
   version "1.1.6"
-  resolved "https://registry.npmjs.org/turbo-linux-64/-/turbo-linux-64-1.1.6.tgz"
+  resolved "https://registry.yarnpkg.com/turbo-linux-64/-/turbo-linux-64-1.1.6.tgz#5b90ab2aa1e2e0a94f18905871d88656335f0285"
   integrity sha512-V4rb41yQUA+vPDgXc06oHmKbgrBUbwm09oRtjvmlIQU8zX8qujMPZIun8tGP4NuzErJXGzD3WDgj7VSsO23IIw==
 
 turbo-linux-arm64@1.1.6:
@@ -143,7 +143,7 @@ turbo-windows-64@1.1.6:
 
 turbo@^1.1.6:
   version "1.1.6"
-  resolved "https://registry.npmjs.org/turbo/-/turbo-1.1.6.tgz"
+  resolved "https://registry.yarnpkg.com/turbo/-/turbo-1.1.6.tgz#dcae11bbd7a465473bdf416b82caac2b7f94d641"
   integrity sha512-pZTc6Sb5MtK/X/qhiDSssc8AZWoUoYf14ZqYjvDWg/aEtqgwYorVJqfRcj4XOXOqtVZ3gO/91eXwdyh/q2aQHA==
   optionalDependencies:
     turbo-darwin-64 "1.1.6"

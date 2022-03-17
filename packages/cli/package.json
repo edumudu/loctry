@@ -1,0 +1,36 @@
+{
+  "name": "loctry",
+  "version": "1.2.0",
+  "author": "Eduardo Wesley <eduardowesley.re@gmail.com>",
+  "description": "A CLI to manage local library testing",
+  "main": "bin/index.mjs",
+  "license": "MIT",
+  "type": "module",
+  "repository": "github:edumudu/loctry",
+  "homepage": "https://github.com/edumudu/loctry/tree/main/packages/cli#readme",
+  "keywords": [
+    "cli",
+    "local development",
+    "library testing",
+    "library development",
+    "local registry",
+    "local npm"
+  ],
+  "files": [
+    "bin",
+    "config",
+    "commands"
+  ],
+  "bin": {
+    "loctry": "./bin/index.mjs"
+  },
+  "dependencies": {
+    "chalk": "^5.0.1",
+    "yargs": "^17.3.1"
+  },
+  "engines": {
+    "node": ">=10.0.0",
+    "npm": ">=7.0.0",
+    "yarn": ">=1.0.0"
+  }
+}

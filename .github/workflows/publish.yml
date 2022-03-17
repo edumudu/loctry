@@ -25,11 +25,13 @@ jobs:
 
       - uses: pocket-apps/action-update-version@v1
         with:
-          files: ./package.json
+          files: ./packages/cli/package.json
           repo-token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Publishing Library
-        run: npm publish
+        run: |
+          npm config set '//registry.npmjs.org/:_authToken' "${NPM_TOKEN}"
+          npm publish --workspace loctry
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
