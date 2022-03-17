@@ -29,7 +29,33 @@
 
 This is a CLI for improve the local library testing experience. Under the hood this CLI uses `npm pack` for generate a tarball equals the sended to the npm registry to allow you test if the proejct is correcty configurated.
 
-Check The CLI [docs](./packages/cli/README.md)
+### Usage
+
+Install the loctry globaly
+```bash
+npm install -g loctry
+```
+
+Enter in your pacakge directory and run
+```bash
+loctry publish
+```
+> NOTE: This  command needs to be run in the same dir as the `package.json`
+
+This command will pack and send your package tarball to the `.loctry` folder to be avaiable to be installed in others projects. 
+
+> NOTE: Do not modify `.loctry` dir manually. This is an internal API
+
+To install the package enter in the project directory and run
+```bash
+loctry install <package-name>
+```
+
+This command will install your local package in the current project
+
+## LICENSE
+
+This project is under MIT licence. See the archive [LICENSE](./packages/cli/LICENSE) to more details.
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
