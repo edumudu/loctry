@@ -15,7 +15,7 @@ const publish = () => {
     name: packageInfo.name,
     version: packageInfo.version,
     description: packageInfo.description,
-    tarballPath: path.join(modulesRoot, tarballFilename),
+    tarballPath: join(modulesRoot, tarballFilename),
   };
 
   fs.writeFileSync(packagesInfoPath, JSON.stringify(packagesInfo, null, 2));
