@@ -53,9 +53,25 @@ loctry install <package-name>
 
 This command will install your local package in the current project
 
+### Commands
+
+#### Publish
+Pack and send your package tarball to the `.loctry` folder to be avaiable to be installed in others projects.
+
+#### Install
+Install your local package in the current project
+
+Ex:
+```bash
+loctry install <package-name>
+```
+
+#### List
+List available packages in the local registry
+
 ## LICENSE
 
-This project is under MIT licence. See the archive [LICENSE](./packages/cli/LICENSE) to more details.
+This project is under MIT licence. See the archive [LICENSE](../../LICENSE) to more details.
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
