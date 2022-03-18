@@ -3,12 +3,20 @@
   "version": "1.0.0",
   "author": "Eduardo Wesley <eduardowesley.re@gmail.com>",
   "private": true,
+  "packageManager": "yarn@1.22.17",
+  "scripts": {
+    "prepare": "husky install"
+  },
   "engines": {
     "node": ">=16.0.0",
     "npm": ">=8.0.0",
     "yarn": ">=1.0.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "^16.2.3",
+    "@commitlint/config-conventional": "^16.2.1",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.3.7",
     "turbo": "^1.1.6"
   },
   "workspaces": [

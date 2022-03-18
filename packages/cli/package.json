@@ -24,9 +24,17 @@
   "bin": {
     "loctry": "./bin/index.mjs"
   },
+  "scripts": {
+    "lint": "eslint --ext .js,.mjs,.ts ."
+  },
   "dependencies": {
     "chalk": "^5.0.1",
     "yargs": "^17.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.11.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.4"
   },
   "engines": {
     "node": ">=10.0.0",

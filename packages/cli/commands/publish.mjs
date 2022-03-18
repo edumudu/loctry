@@ -1,4 +1,4 @@
-import { execSync } from 'child_process'
+import { execSync } from 'child_process';
 import chalk from 'chalk';
 import fs from 'fs';
 import { join } from 'path';
@@ -22,4 +22,7 @@ const publish = () => {
   console.log(chalk.green('Package published successfully!'));
 };
 
-export default publish;
+export const command = 'publish';
+export const desc = 'Publish a package to the local registry';
+export const builder = {};
+export const handler = publish;
