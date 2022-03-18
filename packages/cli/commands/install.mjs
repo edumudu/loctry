@@ -13,7 +13,7 @@ const install = (packageName) => {
     process.exit(1);
   }
 
-  execSync(`npm install ${tarballPath}`);
+  execSync(`npm install ${tarballPath}`, { stdio: 'inherit' });
   console.log(chalk.green('Package installed successfully!'));
 };
 
