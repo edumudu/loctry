@@ -18,6 +18,7 @@ const install = (packageName) => {
 };
 
 export const command = 'install <packageName>';
+export const aliases = ['i'];
 export const desc = 'Install a package from the local registry';
 export const builder = {};
 export const handler = (argv) => install(argv.packageName);
