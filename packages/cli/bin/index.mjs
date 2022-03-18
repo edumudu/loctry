@@ -9,9 +9,9 @@ import { modulesRoot, packageDir, packagesInfoPath } from '../config/paths.mjs';
 import { commands } from '../commands/index.mjs';
 
 // Verify if global node_modules and package exists, if not, create it
-if(!fs.existsSync(packageDir)) fs.mkdirSync(packageDir);
-if(!fs.existsSync(modulesRoot)) fs.mkdirSync(modulesRoot);
-if(!fs.existsSync(packagesInfoPath)) fs.writeFileSync(packagesInfoPath, '{}');
+if (!fs.existsSync(packageDir)) fs.mkdirSync(packageDir);
+if (!fs.existsSync(modulesRoot)) fs.mkdirSync(modulesRoot);
+if (!fs.existsSync(packagesInfoPath)) fs.writeFileSync(packagesInfoPath, '{}');
 
 yargs(hideBin(process.argv))
   .command(commands)

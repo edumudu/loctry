@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "author": "Eduardo Wesley <eduardowesley.re@gmail.com>",
   "private": true,
+  "packageManager": "yarn@1.22.17",
   "scripts": {
     "prepare": "husky install"
   },

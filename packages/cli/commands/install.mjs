@@ -8,10 +8,10 @@ const install = (packageName) => {
   const packagesInfo = JSON.parse(fs.readFileSync(packagesInfoPath, 'utf-8'));
   const tarballPath = packagesInfo[packageName]?.tarballPath;
 
-  if(!tarballPath) {
+  if (!tarballPath) {
     console.log(chalk.red(`Package ${packageName} not found in the local registry`));
     process.exit(1);
-  };
+  }
 
   execSync(`npm install ${tarballPath}`);
   console.log(chalk.green('Package installed successfully!'));
