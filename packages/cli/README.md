@@ -29,6 +29,8 @@
 
 This is a CLI for improve the local library testing experience. Under the hood this CLI uses `npm pack` for generate a tarball equals the sended to the npm registry to allow you test if the proejct is correcty configurated.
 
+> NOTE: this requires at least NPM 7+
+
 ### Usage
 
 Install the loctry globaly
