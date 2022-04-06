@@ -23,6 +23,7 @@ const publish = () => {
 };
 
 export const command = 'publish';
+export const aliases = ['pub'];
 export const desc = 'Publish a package to the local registry';
 export const builder = {};
 export const handler = publish;
