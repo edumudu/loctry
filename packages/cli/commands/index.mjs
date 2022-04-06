@@ -4,11 +4,13 @@
  */
 
 import * as publishModule from './publish.mjs';
+import * as unpublishModule from './unpublish.mjs';
 import * as installModule from './install.mjs';
 import * as listModule from './list.mjs';
 
 export const commands = [
   publishModule,
+  unpublishModule,
   installModule,
   listModule,
 ];

@@ -60,6 +60,14 @@ This command will install your local package in the current project
 #### Publish
 Pack and send your package tarball to the `.loctry` folder to be avaiable to be installed in others projects.
 
+#### Unpublish
+Remove your package tarball from the `.loctry` folder. The package cannot be installed in others projects after this.
+
+Ex:
+```bash
+loctry unpublish <package-name>
+```
+
 #### Install
 Install your local package in the current project
 
