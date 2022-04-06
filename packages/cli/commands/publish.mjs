@@ -20,6 +20,7 @@ const publish = () => {
 
   fs.writeFileSync(packagesInfoPath, JSON.stringify(packagesInfo, null, 2));
   console.log(chalk.green('Package published successfully!'));
+  console.log(chalk.blueBright(`You can run "loctry install ${packageInfo.name}" to install it.`));
 };
 
 export const command = 'publish';
