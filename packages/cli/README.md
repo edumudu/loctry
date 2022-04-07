@@ -79,6 +79,14 @@ loctry install <package-name>
 #### List
 List available packages in the local registry
 
+#### Info
+Show info stored about the given package
+
+Ex:
+```bash
+loctry info <package-name>
+```
+
 ## LICENSE
 
 This project is under MIT licence. See the archive [LICENSE](../../LICENSE) to more details.
