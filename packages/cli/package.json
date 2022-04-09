@@ -20,7 +20,8 @@
   "files": [
     "bin",
     "config",
-    "commands"
+    "commands",
+    "utils"
   ],
   "bin": {
     "loctry": "./bin/index.mjs"
