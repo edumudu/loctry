@@ -3,17 +3,19 @@ import fs from 'fs';
 import chalk from 'chalk';
 
 import { packagesInfoPath } from '../config/paths.mjs';
+import { getWorkdirPkgManager } from '../utils/get-workdir-pkg-manager.mjs';
 
 const install = (packageName) => {
   const packagesInfo = JSON.parse(fs.readFileSync(packagesInfoPath, 'utf-8'));
-  const tarballPath = packagesInfo[packageName]?.tarballPath;
+  const packageInfo = packagesInfo[packageName];
+  const packageManager = getWorkdirPkgManager();
 
-  if (!tarballPath) {
+  if (!packageInfo?.tarballPath) {
     console.log(chalk.red(`Package ${packageName} not found in the local registry`));
     process.exit(1);
   }
 
-  execSync(`npm install ${tarballPath}`, { stdio: 'inherit' });
+  execSync(`${packageManager} add ${packageInfo.tarballPath}`, { stdio: 'inherit' });
   console.log(chalk.green('Package installed successfully!'));
 };
 
