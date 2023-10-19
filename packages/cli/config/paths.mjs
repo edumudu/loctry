@@ -3,7 +3,7 @@ import os from 'os';
 import { createRequire } from 'module';
 
 const require = createRequire(import.meta.url);
-const { version } = require('../package.json');
+const { version } = require(path.join('..', 'package.json'));
 
 export const packageDir = path.join(os.homedir(), '.loctry');
 export const modulesRoot = path.join(packageDir, 'node_modules');

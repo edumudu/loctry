@@ -14,6 +14,7 @@ module.exports = {
   rules: {
     'no-console': 'off',
     'import/prefer-default-export': 'off',
+    'import/no-dynamic-require': 'off',
     'import/extensions': ['error', 'ignorePackages', {
       js: 'always',
       mjs: 'always',
