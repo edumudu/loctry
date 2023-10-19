@@ -1,6 +1,6 @@
-import path from 'path';
-import os from 'os';
-import { createRequire } from 'module';
+import path from 'node:path';
+import os from 'node:os';
+import { createRequire } from 'node:module';
 
 const require = createRequire(import.meta.url);
 const { version } = require(path.join('..', 'package.json'));

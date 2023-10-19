@@ -1,5 +1,5 @@
+import fs from 'node:fs';
 import chalk from 'chalk';
-import fs from 'fs';
 
 import { packagesInfoPath } from '../config/paths.mjs';
 

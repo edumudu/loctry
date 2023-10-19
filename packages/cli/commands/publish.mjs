@@ -1,8 +1,8 @@
-import { execSync } from 'child_process';
+import { execSync } from 'node:child_process';
+import fs from 'node:fs';
+import { join } from 'node:path';
+import process from 'node:process';
 import chalk from 'chalk';
-import fs from 'fs';
-import { join } from 'path';
-import process from 'process';
 
 import { modulesRoot, packagesInfoPath } from '../config/paths.mjs';
 
