@@ -5,6 +5,16 @@ import chalk from 'chalk';
 import { packagesInfoPath } from '../config/paths.mjs';
 import { getWorkdirPkgManager } from '../utils/get-workdir-pkg-manager.mjs';
 
+const PACKAGE_MANAGER_FOR_FLAG = {
+  yarn: '--check-files',
+  npm: '--no-cache',
+  pnpm: '--prefer-fresh',
+};
+
+function getPreferFreshFlag(packageManager) {
+  return PACKAGE_MANAGER_FOR_FLAG[packageManager];
+}
+
 const install = (packageName) => {
   const packagesInfo = JSON.parse(fs.readFileSync(packagesInfoPath, 'utf-8'));
   const packageInfo = packagesInfo[packageName];
@@ -15,7 +25,9 @@ const install = (packageName) => {
     process.exit(1);
   }
 
-  execSync(`${packageManager} add ${packageInfo.tarballPath}`, { stdio: 'inherit' });
+  const flag = getPreferFreshFlag(packageManager);
+
+  execSync(`${packageManager} add ${packageInfo.tarballPath} ${flag}`, { stdio: 'inherit' });
   console.log(chalk.green('Package installed successfully!'));
 };
 
